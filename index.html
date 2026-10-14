@@ -85,29 +85,29 @@
       <div class="ba-grid">
         <figure class="ba-item">
           <div class="ba3 glass" style="--p1:33%;--p2:66%">
-            <img class="l2" src="assets/compare/exterior-twilight.jpg" alt="Twilight: the same house at dusk with warm lit windows" width="1600" height="1200">
+            <img class="l2" src="assets/compare/exterior-before.jpg" alt="Before: the house front under a flat grey sky" width="1600" height="1200">
             <img class="l1" src="assets/compare/exterior-after.jpg" alt="Enhanced: the house front, bright, with a clear blue sky" width="1600" height="1200">
-            <img class="l0" src="assets/compare/exterior-before.jpg" alt="Before: the house front under a flat grey sky" width="1600" height="1200">
-            <span class="ba-label t0">Before</span>
+            <img class="l0" src="assets/compare/exterior-twilight.jpg" alt="Twilight: the same house at dusk with warm lit windows" width="1600" height="1200">
+            <span class="ba-label t0">Twilight</span>
             <span class="ba-label t1">Enhanced</span>
-            <span class="ba-label t2">Twilight</span>
+            <span class="ba-label t2">Before</span>
             <div class="ba-handle h1" aria-hidden="true"><span>&#8249;&#8239;&#8250;</span></div>
             <div class="ba-handle h2" aria-hidden="true"><span>&#8249;&#8239;&#8250;</span></div>
-            <input class="ba-range r1" type="range" min="0" max="100" value="33" aria-label="Exterior: move the line between before and enhanced">
-            <input class="ba-range r2" type="range" min="0" max="100" value="66" aria-label="Exterior: move the line between enhanced and twilight">
+            <input class="ba-range r1" type="range" min="0" max="100" value="33" aria-label="Exterior: move the line between twilight and enhanced">
+            <input class="ba-range r2" type="range" min="0" max="100" value="66" aria-label="Exterior: move the line between enhanced and before">
           </div>
-          <figcaption>Exterior: original, enhanced, then twilight. Drag either handle.</figcaption>
+          <figcaption>Exterior: slide right to go from the original to enhanced to twilight.</figcaption>
         </figure>
         <figure class="ba-item">
           <div class="ba glass" style="--pos:50%">
-            <img class="ba-after" src="assets/compare/dining2-after.jpg" alt="After: the dining room, bright and evenly lit" width="1600" height="1200">
             <img class="ba-before" src="assets/compare/dining2-before.jpg" alt="Before: the dining room, dim and uneven" width="1600" height="1200">
-            <span class="ba-label l">Before</span>
-            <span class="ba-label r">After</span>
+            <img class="ba-after" src="assets/compare/dining2-after.jpg" alt="After: the dining room, bright and evenly lit" width="1600" height="1200">
+            <span class="ba-label l">After</span>
+            <span class="ba-label r">Before</span>
             <div class="ba-handle" aria-hidden="true"><span>&#8249;&#8239;&#8250;</span></div>
             <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Dining room: slide to compare before and after">
           </div>
-          <figcaption>Dining room: lighting balanced, table cleared</figcaption>
+          <figcaption>Dining room: slide right to see the lighting balanced and the table cleared.</figcaption>
         </figure>
       </div>
     </section>
@@ -302,8 +302,9 @@
     const io = new IntersectionObserver((entries) => {
       if (!entries[0].isIntersecting) return;
       io.disconnect();
-      // Sweep open each layer in turn: show before, then enhanced, then twilight.
-      const keys = [[0, 33, 66], [700, 70, 85], [1500, 12, 85], [2300, 12, 30], [3100, 33, 66]];
+      // Tell the story left to right: the original, then the enhanced version
+      // sweeping across it, then twilight sweeping across that.
+      const keys = [[0, 33, 66], [700, 0, 6], [1600, 0, 88], [2500, 70, 88], [3300, 33, 66]];
       const ease = (p) => (p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2);
       let t0 = 0;
       const step = (now) => {
