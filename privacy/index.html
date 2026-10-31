@@ -24,11 +24,11 @@
   <main class="wrap legal">
     <article class="doc glass">
       <h1>Privacy Policy</h1>
-      <p class="updated">Effective October 12, 2026</p>
+      <p class="updated">Effective October 31, 2026</p>
 
       <p>AUTOFRAIME ("AUTOFRAIME," "we," "us") makes an iPhone app that helps real estate professionals shoot, enhance and share listing photos. This policy explains what information the app collects, how we use it, who we share it with, and how you can delete it. If anything here is unclear, email <a href="mailto:autofraime@gmail.com">autofraime@gmail.com</a>.</p>
 
-      <div class="callout"><strong>The short version.</strong> We collect what is needed to run your account and process your photos. Photos you choose to enhance are sent to AI providers (OpenAI, and Google as a backup) to create the result. We do not sell your information, we do not run ads, and we do not use analytics or tracking tools. You can delete your account and all of its data from inside the app at any time.</div>
+      <div class="callout"><strong>The short version.</strong> We collect what is needed to run your account and process your photos. Photos you choose to enhance are sent through our server to our AI provider, OpenAI, to create the result. We do not sell your information, we do not run ads, and we do not use analytics or tracking tools. You can delete your account and all of its data from inside the app at any time.</div>
 
       <nav class="toc">
         <a href="#collect">What we collect</a><a href="#use">How we use it</a><a href="#ai">AI processing</a>
@@ -43,19 +43,20 @@
         <li><strong>Listings.</strong> Property addresses you enter, the city and state of a selected address, an optional client name, and listing details such as price, beds, baths and square footage when you create a flyer.</li>
         <li><strong>Photos.</strong> Photos you take with the in-app camera or choose to import from your photo library, the enhanced versions we create, room labels, and the date each photo was taken.</li>
         <li><strong>Your agent profile (brand kit).</strong> Your name, phone, company, email, website, logo and headshot. These are backed up to your account so they carry over to a new phone, and appear on things you create and share, such as a flyer or a client gallery link.</li>
-        <li><strong>Messages to us.</strong> Feedback or support messages you send from the app or by email, along with your account ID and app version so we can investigate.</li>
+        <li><strong>Messages to us.</strong> Feedback or support messages you send from the app or by email, along with your account ID, app version, device model and iOS version so we can investigate.</li>
       </ul>
       <h3>Information collected automatically</h3>
       <ul>
         <li><strong>Token and subscription status.</strong> Your token balance, which plan you are on, and usage needed to apply token charges and refunds.</li>
         <li><strong>Purchase records.</strong> Purchases are handled by Apple. We and RevenueCat, our purchase-management provider, receive transaction details and an anonymous app user ID. We never receive your payment card information.</li>
         <li><strong>Basic technical data.</strong> Our infrastructure providers process standard technical information, such as IP address and app configuration requests, to deliver the service.</li>
+        <li><strong>Push notification token.</strong> A push notification token for your device, so we can tell you when we reply to your feedback.</li>
       </ul>
       <h3>Device features the app uses</h3>
       <ul>
         <li><strong>Camera and photo library</strong>, only when you choose to shoot or import. When importing, the app only receives the photos you select.</li>
         <li><strong>Motion sensors</strong>, to show the level guide and straighten photos. This data stays on your device and is not stored or sent to us.</li>
-        <li><strong>Notifications</strong>, generated on your device to tell you when an enhance has finished.</li>
+        <li><strong>Notifications</strong>, to tell you when an enhance has finished and when we reply to your feedback. You can turn them off anytime in your iPhone's Settings.</li>
         <li><strong>Address suggestions.</strong> As you type an address, the text is sent to Apple Maps to suggest matches. The app does not request access to your location.</li>
       </ul>
       <h3>What we do not collect</h3>
@@ -73,17 +74,16 @@
       <p>We do not sell your personal information or share it for cross-context behavioral advertising.</p>
 
       <h2 id="ai">3. AI photo processing</h2>
-      <p>When you enhance a photo, remake it, or add twilight, the photo and our editing instructions (plus any note you type) are sent to a third-party AI provider, which returns the edited image. The app asks for your permission before it first sends photos for AI processing.</p>
+      <p>When you enhance a photo, remake it, or add twilight, the photo and our editing instructions (plus any note you type) are sent through our server to a third-party AI provider, which returns the edited image. The app asks for your permission before it first sends photos for AI processing.</p>
       <ul>
-        <li><strong>OpenAI</strong> is our primary provider for photo enhancement.</li>
-        <li><strong>Google (Gemini)</strong> is a backup provider for enhancement, used only if OpenAI is unavailable.</li>
+        <li><strong>OpenAI</strong> is our provider for photo enhancement.</li>
       </ul>
-      <p>These providers process your photos to produce the result, under their own terms and privacy policies (<a href="https://openai.com/policies/privacy-policy" rel="noopener">OpenAI</a>, <a href="https://policies.google.com/privacy" rel="noopener">Google</a>). We do not use your photos to train AI models. Only photos you choose to process are sent; nothing is sent automatically.</p>
+      <p>OpenAI processes your photos to produce the result, under its own <a href="https://openai.com/policies/privacy-policy" rel="noopener">terms and privacy policy</a>. We do not use your photos to train AI models. Only photos you choose to process are sent; nothing is sent automatically.</p>
 
       <h2 id="share">4. How information is shared</h2>
       <p>We share information only as described here:</p>
       <ul>
-        <li><strong>Service providers</strong> that run the app for us: Google Firebase and Google Cloud (sign-in, database and photo storage), OpenAI and Google Gemini (AI processing), RevenueCat (purchase management), and Apple (App Store purchases, Sign in with Apple, and address suggestions). They may use your information only to provide their services.</li>
+        <li><strong>Service providers</strong> that run the app for us: Google Firebase and Google Cloud (sign-in, database and photo storage), OpenAI (AI processing), RevenueCat (purchase management), and Apple (App Store purchases, Sign in with Apple, and address suggestions). They may use your information only to provide their services.</li>
         <li><strong>People you choose to share with.</strong> When you create a client gallery link, anyone who has that link can view the listing's photos, address, and the name and company you show on it. Flyers and exported photos go wherever you send them.</li>
         <li><strong>Legal and safety reasons</strong>, when required by law or to protect the rights, safety or property of our users, the public or AUTOFRAIME.</li>
         <li><strong>Business transfers</strong>, if AUTOFRAIME is involved in a merger, acquisition or sale of assets, in which case this policy continues to apply to your information.</li>
@@ -98,6 +98,7 @@
         <li>Deleting a photo or a listing in the app removes it from your device and from our cloud storage.</li>
         <li><strong>Deleting your account</strong> (in the app: Account, then Delete account) permanently removes your account, every listing, every photo and enhanced version, your brand kit, your client gallery pages, any feedback messages you sent in the app, and your token balance, from your device and our servers. This cannot be undone.</li>
         <li>An active subscription is billed by Apple and is not cancelled by deleting your account. Cancel it in Settings, then your name, then Subscriptions.</li>
+        <li>Purchase records held by Apple and by RevenueCat are kept as their policies and accounting rules require.</li>
         <li>Records we are legally required to keep, and support emails you send us, may be retained as long as needed for those purposes.</li>
       </ul>
 
